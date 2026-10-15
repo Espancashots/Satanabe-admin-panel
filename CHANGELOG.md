@@ -1,10 +1,30 @@
-## v1.1.2 Alpha — GitHub Clone — 2026-10-05
-- Pacote preparado para publicação em uma nova conta GitHub, mantendo a mesma Supabase e o mesmo External.
-- Adicionado `.nojekyll` para GitHub Pages.
-- Adicionado guia `DEPLOY-NOVO-GITHUB.md`.
-- Adicionado seletor de aba do External ao importar e editar patches: Rankeada, Apostado e Skins.
-- O frontend envia a seleção pelo campo `interfaceTab`.
-- Nenhuma URL, chave publicável, Edge Function, bucket, dados ou configuração da Supabase foi trocada.
+# v1.2.0 Alpha — validade de revendedores e keys personalizadas
+
+- Revendedores agora possuem data/hora exata de expiração do acesso.
+- Lista mostra vencimento e tempo restante.
+- Cada revendedor continua com sua pasta própria (Overview / Keys / Clientes).
+- Nova ação **Validade**: adicionar tempo, reiniciar a validade a partir de agora ou deixar sem vencimento.
+- Cadastro de novo revendedor exige duração inicial do acesso (dias, horas, minutos e segundos).
+- Nova criação de key personalizada dentro da pasta do revendedor.
+- Duração da key pode ser informada em dias + HH:MM:SS, inclusive exemplos como `01:21:25` e `1d 00:00:15`.
+- Quantidade por operação: 1 a 100 keys; aparelhos por key: 1 a 20.
+- Integração prevista com `admin-resellers-api` atualizado e nova `admin-reseller-custom-key-api`.
+
+# v1.1.3 Alpha — Login e senha do revendedor no Admin
+
+- Adicionado Login do painel e Senha do painel ao cadastro/edição de revendedores.
+- Adicionado botão Gerenciar acesso para trocar login ou senha depois.
+- Removido o e-mail como credencial de acesso na interface de revendedores.
+- Integração com `admin-reseller-credentials-api`.
+- Botão Abrir painel agora leva à tela de login por usuário + senha.
+
+## v1.1.2 Alpha
+
+- Adiciona botão **Remover** na lista de revendedores e **Remover revendedor** dentro do painel individual.
+- A remoção exclui o cadastro do revendedor e sua conta de autenticação.
+- Keys, clientes e transações existentes são preservados e ficam sem `reseller_id`.
+- A confirmação exige digitar exatamente o nome da loja.
+- Atualiza o endereço do painel para `https://espancashots.github.io/revendedor-site-/`.
 
 ## v1.1.1 Alpha
 - Integração do acesso do revendedor com Supabase Auth.

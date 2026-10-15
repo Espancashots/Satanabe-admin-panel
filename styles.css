@@ -121,4 +121,10 @@ label{display:grid;gap:5px}label span,.copy-payment span{font-size:11px;color:#c
 @media (max-width:760px){.summary-grid.five,.summary-grid.six{grid-template-columns:repeat(2,minmax(0,1fr))}.reseller-grid{grid-template-columns:1fr}.reseller-detail-head{align-items:flex-start;flex-direction:column}.reseller-detail-title{align-items:flex-start;flex-direction:column}.reseller-detail-head>.row-actions{width:100%}.reseller-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:390px){.summary-grid.five,.summary-grid.six{grid-template-columns:repeat(2,minmax(0,1fr))}.reseller-metrics{grid-template-columns:1fr}.permission-box{display:grid;grid-template-columns:1fr 1fr}}
 
-.badge.tab{color:#ffd7db;background:#2a1117;border-color:#7f2430;text-transform:uppercase;letter-spacing:.04em}
+
+/* v1.2.0 - validade de revendedores e keys personalizadas */
+.reseller-access-line{display:flex;flex-wrap:wrap;gap:7px 14px;margin-top:8px;color:var(--muted);font-size:12px}.reseller-access-line strong{color:var(--text)}
+.duration-box{margin:0}.duration-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.duration-grid label{min-width:0}.duration-preview{margin-top:10px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#0f0f12;color:var(--muted)}.duration-preview strong{color:var(--text)}
+.access-current{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}.access-current>div{padding:12px;border:1px solid var(--line);border-radius:12px;background:#101014}.access-current span,.access-current strong{display:block}.access-current span{color:var(--muted);font-size:11px;margin-bottom:5px}.access-stat strong{font-size:15px!important;line-height:1.25}.access-stat small{display:block;margin-top:5px}
+@media(max-width:760px){.duration-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.access-current{grid-template-columns:1fr}.reseller-detail-summary{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:480px){.duration-grid{grid-template-columns:1fr 1fr}.reseller-detail-summary{grid-template-columns:1fr!important}}

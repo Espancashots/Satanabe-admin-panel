@@ -1,4 +1,4 @@
-# Satanabe Admin v1.1.2 Alpha — GitHub Clone
+# Satanabe Admin v1.1.2 Alpha
 
 Painel administrativo responsivo para gerenciamento de keys, clientes, cobranças/renovações, revendedores, patches e logs.
 
@@ -54,8 +54,15 @@ A área de revendedores usa uma Edge Function protegida por sessão do Supabase 
 
 ## Versão
 
-`1.1.2-alpha-github-clone`
+`1.1.1-alpha`
 
+
+## v1.1.2 Alpha
+
+- Adiciona remoção segura de revendedores.
+- Remove a conta de acesso do revendedor, preservando keys, clientes e histórico financeiro.
+- Exige confirmação digitando o nome exato da loja.
+- Corrige o endereço do painel de revendedores para `revendedor-site-`.
 
 ## v1.1.1 Alpha
 - Acesso de revendedor por e-mail integrado ao Supabase Auth.
@@ -71,8 +78,8 @@ O painel esperado é `https://espancashots.github.io/satanabe-reseller/`. Em Sup
 Para envio automático de convites a qualquer endereço de e-mail em produção, configure SMTP próprio no Supabase Auth. Sem SMTP próprio, o Admin consegue gerar um link manual para você copiar e enviar ao revendedor.
 
 
-## Cópia para novo GitHub
-Esta distribuição foi preparada para ser publicada em outra conta GitHub sem trocar o backend. A Supabase, as Edge Functions, o bucket de patches, o login administrativo e os dados permanecem os mesmos. Consulte `DEPLOY-NOVO-GITHUB.md`.
+## v1.2.0 Alpha — acesso com validade e keys personalizadas
 
-## Abas do External
-Ao importar ou editar um patch, o Admin agora permite escolher **Rankeada**, **Apostado** ou **Skins**. A escolha é enviada ao backend como `interfaceTab`.
+A aba Revendedores agora mostra a expiração de cada conta e permite gerenciar a validade em dias, horas, minutos e segundos. Dentro da pasta de cada revendedor, a aba Keys possui criação personalizada com duração exata.
+
+**Backend necessário:** aplique os arquivos de `SUPABASE_SETUP` incluídos no pacote antes de publicar esta versão em produção.
